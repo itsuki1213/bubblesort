@@ -34,15 +34,15 @@ int main()
 
 	int tmp;
 
-	for (int i = 0; i < input; i++)
+	for (int i = 0; i < input - 1; i++)
 	{
-		for (int j = i + 1; j < input; j++)
+		for (int j = input - 1; j > i ; j--)
 		{
-			if (array[i] > array[j])
+			if (array[j - 1] > array[j])
 			{
 				tmp = array[j];
-				array[j] = array[i];
-				array[i] = tmp;
+				array[j] = array[j - 1];
+				array[j - 1] = tmp;
 			}
 		}
 	}
